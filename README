@@ -2,5 +2,7 @@ An enhanced version of Trent Foley's jQuery Galleriffic plugin
 
 http://www.twospy.com/galleriffic/
 
-fork of http://galleriffic.googlecode.com/svn/trunk/example r32
+I needed finer control over the output of this excellent gallery plugin, so I've made the following enhancements:
 
+* Play-Pause, Previous, Next links are all in distinct div's for easier styling.
+* Play, Pause, Previous, Next, Pagination links have HTML option to use non-text links.
