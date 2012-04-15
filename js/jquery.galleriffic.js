@@ -625,6 +625,9 @@
 				// This causes the preloader (if still running) to relocate out from the currentIndex
 				this.relocatePreload = true;
 
+				this.$imageContainer.empty();
+				$(this.captionContainerSel).empty();
+
 				return this.syncThumbs();
 			},
 
@@ -642,11 +645,10 @@
 					.find('span.current').css('opacity', '0');
 				
 				newSlide.find('a')
-					.append(imageData.image);
-					// disable main image click, double clicking causes rendering issues
-					// .click(function(e) {
-					// 	gallery.clickHandler(e, this);
-					// });
+					.append(imageData.image)
+					.click(function(e) {
+						gallery.clickHandler(e, this);
+					});
 				
 				var newCaption = 0;
 				if (this.$captionContainer) {
